@@ -1,6 +1,6 @@
 # 🌐 Azure Infrastructure as Code – Fioneer DevOps Challenge
 
-This proof-of-concept (PoC) demonstrates Infrastructure as Code (IaC) deployment using Azure ARM templates, PowerShell automation, and GitHub source control. It enables standardized provisioning of core Azure resources like Virtual Networks and Storage Accounts.
+This proof-of-concept  demonstrates Infrastructure as Code deployment using Azure ARM templates, PowerShell automation, and GitHub source control. It enables standardized provisioning of core Azure resources like Virtual Networks and Storage Accounts.
 
 ---
 
