@@ -1,22 +1,31 @@
-# Azure Infrastructure as Code – Fioneer DevOps Challenge
+# 🌐 Azure Infrastructure as Code – Fioneer DevOps Challenge
 
-This PoC uses Azure ARM templates to deploy a Virtual Network and Storage Account.
+This project is a proof-of-concept (PoC) solution to demonstrate Infrastructure as Code (IaC) best practices using **Azure ARM templates**, **PowerShell scripting**, and **GitHub source control**.
 
-## 🚀 One-Click Deploy
-
-Click the button below to deploy directly to your Azure subscription:
-
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fvinoji2005%2Ffioneer-azure-iac-poc%2Fmain%2Ftemplates%2FmainTemplate.json)
+The goal is to provide a reusable, source-controlled deployment method for foundational Azure infrastructure such as a **Virtual Network** and **Storage Account** — with modular, secure, and standardized practices.
 
 ---
 
-## 📁 Structure
+## 🚀 One-Click Deployment via Portal
 
-- `templates/`: ARM templates
-- `scripts/`: PowerShell for deployment and cleanup
-- `Development_Journal.txt`: Notes, references, LLM outputs
+Click the button below to deploy the ARM template directly to your Azure subscription via the Azure Portal:
 
-## 📌 Requirements
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fvinoji2005%2Ffioneer-azure-iac-poc%2Fmain%2Ftemplates%2FmainTemplate.json)
 
-- Azure CLI (`az login`)
-- PowerShell 7+
+> ⚠️ **Important:** If you're using a fresh or empty Azure subscription, the required **Resource Group must already exist**. If it doesn’t, please run the provided PowerShell script below **before using the button**.
+
+---
+
+## 🧰 Deploy via PowerShell (Recommended)
+
+Use the following script to automatically create the Resource Group and trigger the ARM deployment.
+
+```powershell
+.\scripts\deploy.ps1 -ResourceGroupName "rg-fioneer-vinoth" -Location "eastus"
+
+## 🧹 Clean Up Deployed Resources
+
+When you're done testing, clean up resources easily with:
+
+.\scripts\cleanup.ps1 -ResourceGroupName "rg-fioneer-vinoth"
+
